@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		<h1>Editar Dueño</h1>
-		<form action="editNewDuenoForm" method="post">
+		<form action="editNewDuenoForm" method="post" modelAttribute="dueno">
 			<!--editar de mascota solo con los parametros de numChip, nombre y vacunacion-->
 			<div>
 				<label for="nombre">Nombre</label>
@@ -22,6 +22,12 @@
 				<label for="dni">DNI</label>
 				<input type="text" id="dni" name="dni" value="${duenoParaEditar.dni}">
 			</div>
+			<!--Mandarle los parametros de la mascota con un select y guardarlo como objeto -->
+			<div>
+				<select path="MascotasDescompuesto">
+    			<options items="${duenoParaEditar.mascota}"></options>
+		  	</select>
+
 			</div>
 			<button type="submit">Guardar</button>
 		</form>

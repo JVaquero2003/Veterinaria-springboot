@@ -62,15 +62,15 @@ public class ListRepositoryDueño implements RepositoryDueño {
 
 	@Override
 	public void editDueño(Dueño dueño) {
-		Dueño dueñoEdit = null;
+		Dueño dueñoParaEditar = null;
 
 		for (Dueño d : list) {
 			if (d.getDni() == dueño.getDni()) {
-				dueñoEdit = d;
+				dueñoParaEditar = d;
 			}
 		}
 
-		list.remove(dueñoEdit);
+		list.remove(dueñoParaEditar);
 		list.add(dueño);
 
 	}

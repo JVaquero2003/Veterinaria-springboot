@@ -6,6 +6,15 @@ public class Dueño {
 	public int dni;
 	public Mascota mascota;
 	public String MascotasDescompuesto;
+	public String color;
+
+	public Dueño(String nombre, int dni, Mascota mascota, String color) {
+		super();
+		this.nombre = nombre;
+		this.dni = dni;
+		this.mascota = mascota;
+		this.color = color;
+	}
 
 	public Dueño() {
 		super();
@@ -59,8 +68,7 @@ public class Dueño {
 
 	@Override
 	public String toString() {
-		return "Dueño [nombre=" + nombre + ", dni=" + dni + ", ChipMascota=" + mascota.getNumChip() +
-				", NombreMascota=" + mascota.getNombre() + ", VacunaMascota=" + mascota.isVacunacion() + "]";
+		return "Dueño [nombre=" + nombre + ", dni=" + dni + " Mascota" + mascota.toString() + ", color=" + color + "]";
 	}
 
 }
